@@ -9,7 +9,7 @@ interface Props {
 
 export const AroundCard: React.FC<Props> = ({ type, around }) => {
   return (
-    <Card className="around-card-wrapper" title={around.place.name}>
+    <Card className="around-card" title={around.place.name}>
       <div className="address">{around.place.address}</div>
       <div className="distance">{around.distance.distance}m</div>
     </Card>
