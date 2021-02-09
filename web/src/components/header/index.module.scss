@@ -1,0 +1,20 @@
+.sidebar {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid #eee;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #d9665b;
+}
+
+.input {
+  margin-top: 16px;
+  width: 80%;
+}

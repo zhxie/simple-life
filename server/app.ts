@@ -1,15 +1,17 @@
 import express from 'express';
 import timeout from 'connect-timeout';
 import morgan from 'morgan';
+import cors from 'cors';
 import AMap from './utils/AMap';
 import Location from './models/Location';
 import { Types, Keywords } from './models/Types';
 
-AMap.loadKey(process.env.AMAP_KEY || '');
+AMap.loadKey(process.env.AMAP_KEY || 'aa70529446e38c9a3bd55dc748d1501b');
 
 const app = express();
 const PORT = 8000;
 
+app.use(cors());
 app.use(express.static('public'));
 app.use(timeout('5s'));
 app.use(morgan('[morgan] [:date[clf]] :remote-addr :method :url :status'));

@@ -106,7 +106,7 @@ class AMap {
   static getPlace = async (city: string, name: string, index?: number) => {
     return AMapInternal.keywordsSearch(AMap.key, [name], city).then((res) => {
       const idx = index || 0;
-
+      console.log(res);
       if (res.pois.length === 0) {
         return null;
       }
